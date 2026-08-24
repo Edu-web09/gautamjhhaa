@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Gautam Jhaa | Trading Education</title>
+
+<meta name="description"
+content="Gautam Jhaa shares market education, trading concepts and market observations through his online trading community.">
+
+<meta name="robots" content="index, follow">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:#070b10;
+    color:#f4f7fa;
+    line-height:1.6;
+}
+
+/* =========================
+   GLOBAL
+========================= */
+
+.container{
+    width:min(1100px,92%);
+    margin:auto;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+.green{
+    color:#55e6a5;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar{
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    background:rgba(7,11,16,.82);
+    backdrop-filter:blur(18px);
+
+    border-bottom:1px solid rgba(255,255,255,.07);
+}
+
+.nav-inner{
+    height:72px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    font-size:20px;
+    font-weight:800;
+    letter-spacing:-.5px;
+}
+
+.logo span{
+    color:#55e6a5;
+}
+
+.nav-link{
+    font-size:14px;
+    color:#aab3bd;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    min-height:640px;
+    display:flex;
+    align-items:center;
+
+    position:relative;
+    overflow:hidden;
+
+    background:
+        radial-gradient(circle at 20% 20%,rgba(85,230,165,.12),transparent 30%),
+        radial-gradient(circle at 80% 70%,rgba(70,130,255,.08),transparent 30%);
+}
+
+.hero-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.badge{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+
+    padding:8px 13px;
+
+    border:1px solid rgba(85,230,165,.25);
+    background:rgba(85,230,165,.06);
+
+    border-radius:50px;
+
+    font-size:12px;
+    color:#9deac7;
+    margin-bottom:22px;
+}
+
+.badge-dot{
+    width:7px;
+    height:7px;
+    border-radius:50%;
+    background:#55e6a5;
+    box-shadow:0 0 12px #55e6a5;
+}
+
+.hero h1{
+    font-size:clamp(42px,6vw,72px);
+    line-height:1.02;
+    letter-spacing:-3px;
+    margin-bottom:22px;
+}
+
+.hero h1 span{
+    color:#55e6a5;
+}
+
+.hero-text{
+    color:#9ca7b2;
+    max-width:560px;
+    font-size:16px;
+    margin-bottom:30px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:9px;
+
+    min-height:50px;
+    padding:0 22px;
+
+    border-radius:12px;
+
+    font-size:14px;
+    font-weight:700;
+
+    transition:.25s ease;
+}
+
+.btn-primary{
+    background:#55e6a5;
+    color:#06110c;
+
+    box-shadow:0 10px 35px rgba(85,230,165,.15);
+}
+
+.btn-primary:hover{
+    transform:translateY(-2px);
+    box-shadow:0 14px 40px rgba(85,230,165,.25);
+}
+
+.btn-secondary{
+    border:1px solid rgba(255,255,255,.1);
+    background:rgba(255,255,255,.03);
+    color:#e7edf2;
+}
+
+.btn-secondary:hover{
+    background:rgba(255,255,255,.07);
+}
+
+/* =========================
+   MARKET CARD
+========================= */
+
+.market-card{
+    position:relative;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.07),
+            rgba(255,255,255,.025)
+        );
+
+    border:1px solid rgba(255,255,255,.09);
+
+    border-radius:24px;
+
+    padding:22px;
+
+    box-shadow:
+        0 30px 80px rgba(0,0,0,.4),
+        inset 0 1px rgba(255,255,255,.05);
+
+    overflow:hidden;
+}
+
+.market-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    margin-bottom:20px;
+}
+
+.market-name{
+    font-weight:700;
+}
+
+.market-sub{
+    color:#7f8993;
+    font-size:12px;
+}
+
+.market-price{
+    color:#55e6a5;
+    font-weight:700;
+    font-size:14px;
+}
+
+.chart{
+    height:260px;
+    position:relative;
+
+    border-radius:15px;
+
+    background:
+        linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);
+
+    background-size:40px 40px;
+
+    overflow:hidden;
+}
+
+.chart svg{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+}
+
+.chart-line{
+    fill:none;
+    stroke:#55e6a5;
+    stroke-width:3;
+    filter:drop-shadow(0 0 6px rgba(85,230,165,.4));
+}
+
+.market-bottom{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:10px;
+    margin-top:15px;
+}
+
+.market-stat{
+    padding:12px;
+    border-radius:12px;
+    background:rgba(255,255,255,.035);
+}
+
+.market-stat small{
+    display:block;
+    color:#727d88;
+    font-size:10px;
+    margin-bottom:4px;
+}
+
+.market-stat strong{
+    font-size:13px;
+}
+
+/* =========================
+   SECTION
+========================= */
+
+section{
+    padding:90px 0;
+}
+
+.section-label{
+    color:#55e6a5;
+    font-size:12px;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    margin-bottom:12px;
+}
+
+.section-title{
+    font-size:clamp(30px,4vw,46px);
+    line-height:1.1;
+    letter-spacing:-1.5px;
+    margin-bottom:16px;
+}
+
+.section-description{
+    color:#8e99a5;
+    max-width:650px;
+}
+
+/* =========================
+   PROFILE
+========================= */
+
+.profile{
+    background:#090e14;
+}
+
+.profile-grid{
+    display:grid;
+    grid-template-columns:330px 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.profile-photo-wrap{
+    position:relative;
+}
+
+.profile-photo{
+    width:100%;
+    aspect-ratio:1/1;
+
+    object-fit:cover;
+
+    border-radius:26px;
+
+    border:1px solid rgba(255,255,255,.1);
+
+    background:#111820;
+
+    box-shadow:0 25px 70px rgba(0,0,0,.45);
+}
+
+/*
+IMPORTANT:
+Replace "gautam.jpg" with your actual photo.
+*/
+
+.profile-name{
+    margin-top:15px;
+    font-size:20px;
+    font-weight:800;
+}
+
+.profile-role{
+    color:#55e6a5;
+    font-size:13px;
+    margin-top:2px;
+}
+
+.profile-content h2{
+    margin-bottom:20px;
+}
+
+.profile-content p{
+    color:#909ba6;
+    margin-bottom:16px;
+}
+
+.info-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:12px;
+    margin:28px 0;
+}
+
+.info-card{
+    padding:18px;
+
+    border-radius:16px;
+
+    border:1px solid rgba(255,255,255,.07);
+    background:rgba(255,255,255,.025);
+}
+
+.info-card strong{
+    display:block;
+    font-size:14px;
+    margin-bottom:5px;
+}
+
+.info-card span{
+    color:#77828d;
+    font-size:11px;
+}
+
+/* =========================
+   EDUCATION
+========================= */
+
+.education{
+    background:#070b10;
+}
+
+.education-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:16px;
+    margin-top:40px;
+}
+
+.edu-card{
+    padding:28px;
+
+    border-radius:20px;
+
+    border:1px solid rgba(255,255,255,.07);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.045),
+            rgba(255,255,255,.015)
+        );
+
+    transition:.25s ease;
+}
+
+.edu-card:hover{
+    transform:translateY(-5px);
+    border-color:rgba(85,230,165,.2);
+}
+
+.edu-icon{
+    width:44px;
+    height:44px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:12px;
+
+    background:rgba(85,230,165,.08);
+
+    color:#55e6a5;
+
+    font-size:19px;
+
+    margin-bottom:20px;
+}
+
+.edu-card h3{
+    font-size:17px;
+    margin-bottom:8px;
+}
+
+.edu-card p{
+    color:#7f8a95;
+    font-size:13px;
+}
+
+/* =========================
+   TELEGRAM SECTION
+========================= */
+
+.community{
+    padding:100px 0;
+}
+
+.community-card{
+    position:relative;
+
+    text-align:center;
+
+    padding:70px 25px;
+
+    border-radius:28px;
+
+    overflow:hidden;
+
+    border:1px solid rgba(85,230,165,.16);
+
+    background:
+        radial-gradient(circle at center,rgba(85,230,165,.1),transparent 50%),
+        rgba(255,255,255,.025);
+}
+
+.telegram-icon{
+    width:64px;
+    height:64px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    margin:0 auto 20px;
+
+    border-radius:20px;
+
+    background:#229ED9;
+
+    font-size:30px;
+
+    box-shadow:0 15px 40px rgba(34,158,217,.2);
+}
+
+.community-card h2{
+    font-size:clamp(30px,4vw,48px);
+    letter-spacing:-1.5px;
+    margin-bottom:15px;
+}
+
+.community-card p{
+    color:#8d98a3;
+    max-width:620px;
+    margin:0 auto 28px;
+}
+
+/* =========================
+   DISCLAIMER
+========================= */
+
+.disclaimer{
+    padding:40px 0 100px;
+}
+
+.disclaimer-box{
+    padding:22px;
+
+    border-radius:16px;
+
+    background:#0b1016;
+
+    border:1px solid rgba(255,255,255,.06);
+
+    color:#727d88;
+
+    font-size:11px;
+
+    text-align:center;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    border-top:1px solid rgba(255,255,255,.06);
+    padding:30px 0 100px;
+    color:#65717c;
+    font-size:12px;
+}
+
+.footer-inner{
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+/* =========================
+   STICKY TELEGRAM
+========================= */
+
+.sticky-telegram{
+    position:fixed;
+
+    bottom:20px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    z-index:2000;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+
+    width:min(400px,90%);
+
+    height:54px;
+
+    border-radius:15px;
+
+    background:#55e6a5;
+
+    color:#06110c;
+
+    font-size:14px;
+    font-weight:800;
+
+    box-shadow:
+        0 12px 40px rgba(0,0,0,.5),
+        0 5px 25px rgba(85,230,165,.15);
+}
+
+.sticky-telegram:hover{
+    transform:translateX(-50%) translateY(-2px);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:800px){
+
+    .hero{
+        min-height:auto;
+        padding:70px 0;
+    }
+
+    .hero-grid{
+        grid-template-columns:1fr;
+        gap:40px;
+    }
+
+    .hero h1{
+        letter-spacing:-2px;
+    }
+
+    .profile-grid{
+        grid-template-columns:1fr;
+        gap:35px;
+    }
+
+    .profile-photo-wrap{
+        max-width:330px;
+        margin:auto;
+    }
+
+    .education-grid{
+        grid-template-columns:1fr;
+    }
+
+    .info-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+@media(max-width:500px){
+
+    .nav-link{
+        display:none;
+    }
+
+    section{
+        padding:65px 0;
+    }
+
+    .market-bottom{
+        grid-template-columns:1fr;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+    }
+
+    .btn{
+        width:100%;
+    }
+
+    .community-card{
+        padding:55px 20px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- =========================
+     NAVBAR
+========================= -->
+
+<header class="navbar">
+
+    <div class="container nav-inner">
+
+        <a href="#" class="logo">
+            Gautam<span>Jhaa</span>
+        </a>
+
+        <a href="#about" class="nav-link">
+            About
+        </a>
+
+    </div>
+
+</header>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+<div class="container hero-grid">
+
+    <div>
+
+        <div class="badge">
+            <span class="badge-dot"></span>
+            Independent Trading Educator
+        </div>
+
+        <h1>
+            Learn the market.<br>
+            <span>Understand the process.</span>
+        </h1>
+
+        <p class="hero-text">
+            I'm Gautam Jhaa. I share my approach to market analysis,
+            trading concepts, risk management and educational market
+            observations with my online community.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a
+                href="https://t.me/+iAmCGOJoQSMzYzQ1"
+                target="_blank"
+                rel="noopener"
+                class="btn btn-primary"
+            >
+                ✈ Join Telegram Community
+            </a>
+
+            <a
+                href="#about"
+                class="btn btn-secondary"
+            >
+                About Gautam
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- MARKET VISUAL -->
+
+    <div class="market-card">
+
+        <div class="market-header">
+
+            <div>
+                <div class="market-name">
+                    Market Analysis
+                </div>
+
+                <div class="market-sub">
+                    Educational View
+                </div>
+            </div>
+
+            <div class="market-price">
+                ● LIVE MARKET
+            </div>
+
+        </div>
+
+        <div class="chart">
+
+            <svg viewBox="0 0 600 260"
+                 preserveAspectRatio="none">
+
+                <polyline
+                    class="chart-line"
+                    points="
+                    0,205
+                    40,190
+                    75,205
+                    110,165
+                    145,178
+                    180,140
+                    220,155
+                    260,115
+                    300,130
+                    340,92
+                    375,110
+                    410,70
+                    450,88
+                    490,50
+                    530,65
+                    600,30
+                    "
+                />
+
+            </svg>
+
+        </div>
+
+        <div class="market-bottom">
+
+            <div class="market-stat">
+                <small>APPROACH</small>
+                <strong>Technical</strong>
+            </div>
+
+            <div class="market-stat">
+                <small>FOCUS</small>
+                <strong>Risk First</strong>
+            </div>
+
+            <div class="market-stat">
+                <small>CONTENT</small>
+                <strong>Educational</strong>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     PROFILE
+========================= -->
+
+<section class="profile" id="about">
+
+<div class="container profile-grid">
+
+    <div class="profile-photo-wrap">
+
+        <!-- Replace gautam.jpg with your actual photo -->
+
+        <img
+            src="https://i.ibb.co/JYz0Jhh/images-2.jpg"
+            alt="Gautam Jhaa - Trading Educator"
+            class="profile-photo"
+        >
+
+        <div class="profile-name">
+            Gautam Jhaa
+        </div>
+
+        <div class="profile-role">
+            Trading Educator
+        </div>
+
+    </div>
+
+
+    <div class="profile-content">
+
+        <div class="section-label">
+            About Me
+        </div>
+
+        <h2 class="section-title">
+            A practical approach to
+            <span class="green">market education.</span>
+        </h2>
+
+        <p>
+            I'm Gautam Jhaa, a trader and trading educator interested
+            in technical analysis, market structure and disciplined
+            risk management.
+        </p>
+
+        <p>
+            Through my online community, I share educational content,
+            market observations, trading concepts and lessons from
+            my experience in the markets.
+        </p>
+
+        <p>
+            The objective is simple — help people understand the
+            process behind a trade rather than focus only on the
+            outcome of a trade.
+        </p>
+
+
+        <div class="info-grid">
+
+            <div class="info-card">
+                <strong>Market Analysis</strong>
+                <span>Technical & structured approach</span>
+            </div>
+
+            <div class="info-card">
+                <strong>Risk Management</strong>
+                <span>Understanding risk before decisions</span>
+            </div>
+
+            <div class="info-card">
+                <strong>Education</strong>
+                <span>Concepts & market observations</span>
+            </div>
+
+        </div>
+
+
+        <!-- TELEGRAM BUTTON UNDER DP / PROFILE -->
+
+        <a
+            href="https://t.me/+iAmCGOJoQSMzYzQ1"
+            target="_blank"
+            rel="noopener"
+            class="btn btn-primary"
+        >
+            ✈ Join My Telegram Community
+        </a>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     EDUCATION
+========================= -->
+
+<section class="education">
+
+<div class="container">
+
+    <div class="section-label">
+        What I Share
+    </div>
+
+    <h2 class="section-title">
+        Learn the thinking behind
+        <span class="green">the chart.</span>
+    </h2>
+
+    <p class="section-description">
+        Educational material designed around understanding
+        markets, planning trades and managing risk responsibly.
+    </p>
+
+
+    <div class="education-grid">
+
+        <div class="edu-card">
+
+            <div class="edu-icon">
+                ↗
+            </div>
+
+            <h3>
+                Technical Analysis
+            </h3>
+
+            <p>
+                Learn how traders study price action,
+                market structure and important levels.
+            </p>
+
+        </div>
+
+
+        <div class="edu-card">
+
+            <div class="edu-icon">
+                ◈
+            </div>
+
+            <h3>
+                Trading Psychology
+            </h3>
+
+            <p>
+                Understand discipline, patience and the
+                importance of following a trading plan.
+            </p>
+
+        </div>
+
+
+        <div class="edu-card">
+
+            <div class="edu-icon">
+                %
+            </div>
+
+            <h3>
+                Risk Management
+            </h3>
+
+            <p>
+                Explore position sizing, risk awareness
+                and responsible trading practices.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     TELEGRAM CTA
+========================= -->
+
+<section class="community">
+
+<div class="container">
+
+    <div class="community-card">
+
+        <div class="telegram-icon">
+            ✈
+        </div>
+
+        <h2>
+            Join the Trading Community
+        </h2>
+
+        <p>
+            Get access to educational market content,
+            trading concepts and market observations
+            shared by Gautam Jhaa.
+        </p>
+
+        <a
+            href="https://t.me/+iAmCGOJoQSMzYzQ1"
+            target="_blank"
+            rel="noopener"
+            class="btn btn-primary"
+        >
+            Join Telegram
+        </a>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     DISCLAIMER
+========================= -->
+
+<section class="disclaimer">
+
+<div class="container">
+
+    <div class="disclaimer-box">
+
+        <strong>Risk Disclosure & Educational Disclaimer</strong>
+
+        <br><br>
+
+        The information provided on this website and through the
+        associated community is for educational and informational
+        purposes only. It should not be considered financial,
+        investment or trading advice.
+
+        <br><br>
+
+        Trading financial markets involves substantial risk and may
+        not be suitable for everyone. Past performance does not
+        guarantee future results. No profit or performance outcome
+        is promised or guaranteed.
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+<div class="container footer-inner">
+
+    <div>
+        © 2026 Gautam Jhaa. All rights reserved.
+    </div>
+
+    <div>
+        Trading Education • Risk Awareness
+    </div>
+
+</div>
+
+</footer>
+
+
+<!-- =========================
+     STICKY TELEGRAM CTA
+========================= -->
+
+<a
+    href="https://t.me/+iAmCGOJoQSMzYzQ1"
+    target="_blank"
+    rel="noopener"
+    class="sticky-telegram"
+>
+    ✈ Join Gautam's Telegram Community
+</a>
+
+
+</body>
+</html>
